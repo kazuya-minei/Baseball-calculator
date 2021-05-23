@@ -47,7 +47,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .title,
@@ -57,16 +57,36 @@
 
 .description {
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
-.code {
-  background: #fafafa;
+.formula {
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  background: #b5b5b570;
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.item {
+  text-align: center;
+}
+
+.result {
+  margin-top: 40px;
+}
+
+.button { 
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  background-color:white;
+  border-color: black;
+  border-radius: 5px;
 }
 
 .grid {
