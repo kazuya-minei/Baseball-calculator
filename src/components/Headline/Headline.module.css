@@ -1,0 +1,28 @@
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 2rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  color: rgb(82, 82, 82);
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.formula {
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  background: #b5b5b570;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}

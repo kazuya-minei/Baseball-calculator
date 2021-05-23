@@ -1,11 +1,11 @@
-import styles from 'src/styles/Home.module.css'
+import styles from 'src/components/Headline/Headline.module.css'
 
 export function Headline(props) {
   return (
     <div>
       <h1 className={styles.title}>{props.title}</h1>
 
-      <div className={styles.allDescription}>
+      <div>
         <p className={styles.description}>
           {props.description}
         </p>

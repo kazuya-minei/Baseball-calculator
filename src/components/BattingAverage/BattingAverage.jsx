@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Headline } from 'src/components/Headline';
-import styles from "src/styles/Home.module.css";
+import styles from "src/components/BattingAverage/BattingAverage.module.css";
 
 export function BattingAvarage() {
   let [BA, setBA] = useState("打率0割0分0厘");
@@ -9,7 +9,6 @@ export function BattingAvarage() {
     const hits = document.getElementById('hits').value;
     const avarage = String(hits/bats);
     const result = Array.from(avarage);
-    console.log(`打率${result[2]}割${result[3]}分${result[4]}厘`);
     if (bats && hits) {
       setBA(`打率${result[2]}割${result[3]}分${result[4]}厘`);
     }
@@ -25,13 +24,13 @@ export function BattingAvarage() {
       />
 
       <div>
-        <h3 class={styles.item}>打席数</h3>
-        <input type="number" id="bats"/>
+        <h3 className={styles.item}>打席数</h3>
+        <input type="number" id="bats" className={styles.form}/>
       </div>
 
       <div>
-        <h3 class={styles.item}>安打数</h3>
-        <input type="number" id="hits"/>
+        <h3 className={styles.item}>安打数</h3>
+        <input type="number" id="hits" className={styles.form}/>
       </div>
 
       <h3 className={styles.result}>{BA}</h3>

@@ -1,0 +1,21 @@
+.item {
+  text-align: center;
+}
+
+.result {
+  margin-top: 40px;
+}
+
+.button { 
+  margin-top: 16px;
+  width: 100px;
+  height: 30px;
+  background-color:white;
+  border-color: black;
+  border-radius: 5px;
+}
+
+.form {
+  height: 30px;
+  font-size: 16px;
+}

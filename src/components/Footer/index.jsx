@@ -1,4 +1,4 @@
-import styles from 'src/styles/Home.module.css'
+import styles from 'src/components/Footer/Footer.module.css'
 import Image from 'next/image'
 
 export function Footer() {
