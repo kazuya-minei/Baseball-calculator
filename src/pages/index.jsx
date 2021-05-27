@@ -43,6 +43,7 @@ export default function Home() {
       <div>
         <button onClick={() => changeFunction("BA")}>打率</button>
         <button onClick={() => changeFunction("ERA")}>防御率</button>
+        <button onClick={() => changeFunction("FA")}>守備率</button>
       </div>
         {isFunction}  
       </main>
