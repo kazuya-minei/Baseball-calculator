@@ -6,17 +6,20 @@ export function BattingAvarage() {
   let [BA, setBA] = useState("打率0割0分0厘");
   
   const getAvarage = useCallback(() => {
-    const bats = document.getElementById('bats').value;  // 打席数
-    const hits = document.getElementById('hits').value;  // 安打数
-    const avarage = String(hits/bats);  // 計算結果を文字列に変換し
-    const SetResult = Array.from(avarage);   // 配列に1文字ずつ分解して格納
-    let NumResult = SetResult.map(function (e){  // 文字列として格納した配列を1文字ずつ数値に変換
-      return Number(e);
-    }); 
-    if (NumResult[5] >= 5) {  // 小数点第四位の四捨五入の処理
-      NumResult[4] += 1;
-    };
-    if (bats && hits) {  // 計算結果の出力。入力が何も無ければ実行されない
+    function getNumResult(params) {
+      const bats = document.getElementById('bats').value;  // 打席数
+      const hits = document.getElementById('hits').value;  // 安打数
+      const avarage = hits/bats;  // 計算
+      const res = Math.round(avarage * 1000)/1000;  // 四捨五入
+      const SetResult = String(res); // 文字列変換
+      return Array.from(SetResult);  // 配列変換
+    }
+    let NumResult = getNumResult();
+    if (NumResult[0] === "1") {
+      setBA(`10割打者!? 首位打者は君だ!`);
+    } else if (!NumResult[4]) {
+      setBA(`打率${NumResult[2]}割${NumResult[3]}分`);
+    } else {
       setBA(`打率${NumResult[2]}割${NumResult[3]}分${NumResult[4]}厘`);
     };
   }, []);

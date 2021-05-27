@@ -11,17 +11,14 @@ export function EarnedRunAverage() {
       const PitchInnings = document.getElementById('PitchInnings').value;  // 投球回数取得
       const avarage = EarnedRun*9/PitchInnings;  // 計算
       const res = Math.round(avarage * 100)/100;  // 四捨五入
-      const SetResult = Array.from(String(res));   // 結果を文字列に変換し、1文字ずつ分解して配列に
+      const SetResult = String(res);   // 結果を文字列に変換
       return SetResult
     }
     let NumResult = getNumResult() 
-    NumResult = NumResult.map(function (e){  // 文字列として格納していた要素を1つずつ数値に変換
-      return Number(e);
-    }); 
-    if (EarnedRun && PitchInnings && isNaN(NumResult[2])) {  // NaN は === NaNでは判定できない
-      setERA(`防御率${NumResult[0]}${NumResult[1]}.${NumResult[3]}${NumResult[4]}`);
-    } else if (EarnedRun && PitchInnings) {
-      setERA(`防御率${NumResult[0]}.${NumResult[2]}${NumResult[3]}`);
+    if (NumResult.length === 5) { 
+      setERA(`防御率${NumResult.slice(0, 5)}`);
+    } else if (NumResult.length === 4) {
+      setERA(`防御率${NumResult.slice(0, 4)}`);
     }
   }, []);
 
