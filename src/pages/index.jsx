@@ -41,9 +41,9 @@ export default function Home() {
           onClick={changeFunction("ERA")}だと、 Too many re-renders. というエラーが発生するので
           アロー関数で対応*/}
       <div>
-        <button onClick={() => changeFunction("BA")}>打率</button>
-        <button onClick={() => changeFunction("ERA")}>防御率</button>
-        <button onClick={() => changeFunction("FA")}>守備率</button>
+        <button className={styles.changeButton} onClick={() => changeFunction("BA")}>打率</button>
+        <button className={styles.changeButton} onClick={() => changeFunction("ERA")}>防御率</button>
+        <button className={styles.changeButton} onClick={() => changeFunction("FA")}>守備率</button>
       </div>
         {isFunction}  
       </main>

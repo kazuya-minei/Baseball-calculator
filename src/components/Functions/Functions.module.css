@@ -3,11 +3,11 @@
 }
 
 .result {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .button { 
-  margin-top: 16px;
+  margin: 16px 0;
   width: 100px;
   height: 30px;
   background-color:white;
