@@ -42,11 +42,21 @@
 }
 
 /* changebutton */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+
 .changeButton {
-  margin: 16px 5px;
+  margin: 16px 8px;
   width: 100px;
   height: 30px;
-  background-color:white;
-  border-color: black;
-  border-radius: 5px;
+  font-weight: 600;
+  border-bottom: solid 1px hsla(0, 0%, 50%, 0.400);
+  text-align: center;
+}
+
+.changeButton:hover {
+  background-color: rgba(128, 128, 128, 0.200);
 }

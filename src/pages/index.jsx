@@ -5,7 +5,7 @@ import { Footer } from 'src/components/Footer'
 import { Header } from 'src/components/Header';
 // import { BattingAvarage } from 'src/components/Functions/BattingAverage';
 // import { EarnedRunAverage } from 'src/components/Functions/EarnedRunAverage';
-import { useFunctionChanger } from 'src/components/hooks/ChangeFunction';
+import { useFunctionChanger } from 'src/hooks/ChangeFunction';
 
 
 export default function Home() {
@@ -40,10 +40,10 @@ export default function Home() {
 
           onClick={changeFunction("ERA")}だと、 Too many re-renders. というエラーが発生するので
           アロー関数で対応*/}
-      <div>
-        <button className={styles.changeButton} onClick={() => changeFunction("BA")}>打率</button>
-        <button className={styles.changeButton} onClick={() => changeFunction("ERA")}>防御率</button>
-        <button className={styles.changeButton} onClick={() => changeFunction("FA")}>守備率</button>
+      <div className={styles.buttons}>
+        <div className={styles.changeButton} onClick={() => changeFunction("BA")}>打率</div>
+        <div className={styles.changeButton} onClick={() => changeFunction("ERA")}>防御率</div>
+        <div className={styles.changeButton} onClick={() => changeFunction("FA")}>守備率</div>
       </div>
         {isFunction}  
       </main>
