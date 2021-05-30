@@ -1,15 +1,10 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-// import { useState } from 'react';
 import { Footer } from 'src/components/Footer'
 import { Header } from 'src/components/Header';
-// import { BattingAvarage } from 'src/components/Functions/BattingAverage';
-// import { EarnedRunAverage } from 'src/components/Functions/EarnedRunAverage';
-import { useFunctionChanger } from 'src/hooks/ChangeFunction';
 
-
-export default function Home() {
-  // const [isBaShow, setIsBaShow] = useState(true);     コンポーネントを飛び出してつかっていた
+export default function Home(props) {
+  // const [isBaShow, setIsBaShow] = useState(true);     コンポーネントを呼び出して使っていた
   // const [isEraShow, setIsEraShow] = useState(false);
   // const FunctionChange = () => {
   //   setIsBaShow((isBaShow) => {
@@ -20,7 +15,9 @@ export default function Home() {
   //   })
   // }
 
-  const { isFunction, changeFunction } = useFunctionChanger();  // フックスで対応
+// const { isFunction, changeFunction } = useFunctionChanger();  フックスで対応していたが
+//                                                               Stateリフトアップの学習の為_app.jsxに移動 
+  const { isFunction, changeFunction } = props;  
 
   return (
     <div className={styles.container}>
