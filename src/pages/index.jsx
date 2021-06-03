@@ -41,6 +41,7 @@ export default function Home(props) {
         <div className={styles.changeButton} onClick={() => changeFunction("BA")}>打率</div>
         <div className={styles.changeButton} onClick={() => changeFunction("ERA")}>防御率</div>
         <div className={styles.changeButton} onClick={() => changeFunction("FA")}>守備率</div>
+        <div className={styles.changeButton} onClick={() => changeFunction("SLP")}>長打率</div>
       </div>
         {isFunction}  
       </main>
