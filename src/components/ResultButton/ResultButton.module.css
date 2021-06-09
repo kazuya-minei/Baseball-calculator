@@ -1,7 +1,3 @@
-.item {
-  text-align: center;
-}
-
 .result {
   margin-top: 20px;
 }
@@ -13,11 +9,4 @@
   background-color:white;
   border-color: black;
   border-radius: 5px;
-}
-
-.form {
-  height: 30px;
-  font-size: 16px;
-  display: block;
-  margin: auto;
 }

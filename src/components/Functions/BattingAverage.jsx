@@ -1,11 +1,12 @@
 import { useCallback, useState } from 'react';
 import { Headline } from 'src/components/Headline';
-import styles from "src/components/Functions/Functions.module.css";
+import { ResultButton } from '../ResultButton';
+import { Forms } from '../Forms';
 
 export function BattingAvarage() {
-  let [BA, setBA] = useState("打率0割0分0厘");
+  let [BA, setBA] = useState("打率 0割0分0厘");
   
-  const getAvarage = useCallback(() => {
+  const getBAvarage = useCallback(() => {
     const bats = document.getElementById('bats').value;  // 打席数
     const hits = document.getElementById('hits').value;  // 安打数
     const avarage = hits/bats;  // 計算
@@ -32,18 +33,18 @@ export function BattingAvarage() {
         formula="打率 ＝ 安打数÷打数"
       />
 
-      <div>
-        <h3 className={styles.item}>打席数</h3>
-        <input type="number" id="bats" className={styles.form}/>
-      </div>
+      <Forms FORMS={[
+        {
+          formTitle: "打席数",
+          id: "bats"
+        },
+        {
+          formTitle: "安打数",
+          id: "hits"
+        }
+      ]}/>
 
-      <div>
-        <h3 className={styles.item}>安打数</h3>
-        <input type="number" id="hits" className={styles.form}/>
-      </div>
-
-      <h3 className={styles.result}>{BA}</h3>
-      <button className={styles.button} onClick={getAvarage}>計算</button>
+      <ResultButton result={BA} functiontype={getBAvarage}/>
     </>
     // React.Fragment
   )
